@@ -2,7 +2,10 @@
 
 const page = () => {
   return (
-    <div>home</div>
+    <div>
+      Please Azhar Make Home Page Quickly
+      You Are To Lazy
+    </div>
   )
 }
 
