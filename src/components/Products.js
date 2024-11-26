@@ -1,7 +1,6 @@
 'use client';
-import ProductPage from "./ProductPage"
-import Navigation from "./Navigation"
-import Footer from "./Footer"
+import ProductList from "./ProductList"
+
 
 import { useState } from 'react'
 import {
@@ -81,7 +80,7 @@ export default function Example() {
   return (
 
     <div className="bg-white">
-      <Navigation/>
+      
       <div>
         {/* Mobile filter dialog */}
         <Dialog open={mobileFiltersOpen} onClose={setMobileFiltersOpen} className="relative z-40 lg:hidden">
@@ -265,12 +264,12 @@ export default function Example() {
               </form>
 
               {/* Product grid */}
-              <div className="lg:col-span-3"><ProductPage/></div>
+              <div className="lg:col-span-3"><ProductList/></div>
             </div>
           </section>
         </main>
       </div>
-      <Footer/>
+      
     </div>
   )
 }

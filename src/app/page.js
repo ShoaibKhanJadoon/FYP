@@ -1,14 +1,9 @@
-import CategoryFilter from "./component/CategoryFilters"
-import Navigation from "./component/Navigation"
-import Footer from "./component/Footer"
-import AddToCart from "./component/AddToCart";
 
 
-export default function Home() {
+const page = () => {
   return (
-    <div>
-      
-      <CategoryFilter/>
-    </div>
-  );
+    <div>home</div>
+  )
 }
+
+export default page
