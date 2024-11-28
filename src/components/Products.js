@@ -1,6 +1,6 @@
 'use client';
 import ProductList from "./ProductList"
-
+import Link from 'next/link';
 
 import { useState } from 'react'
 import {
@@ -17,6 +17,7 @@ import {
 } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
+
 
 const sortOptions = [
   { name: 'Most Popular', href: '#', current: true },
@@ -112,9 +113,9 @@ export default function Example() {
                 <ul role="list" className="px-2 py-3 font-medium text-gray-900">
                   {subCategories.map((category) => (
                     <li key={category.name}>
-                      <a href={category.href} className="block px-2 py-3">
+                      <Link href={category.href} className="block px-2 py-3">
                         {category.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -182,7 +183,7 @@ export default function Example() {
                   <div className="py-1">
                     {sortOptions.map((option) => (
                       <MenuItem key={option.name}>
-                        <a
+                        <Link
                           href={option.href}
                           className={classNames(
                             option.current ? 'font-medium text-gray-900' : 'text-gray-500',
@@ -190,7 +191,7 @@ export default function Example() {
                           )}
                         >
                           {option.name}
-                        </a>
+                        </Link>
                       </MenuItem>
                     ))}
                   </div>
@@ -224,7 +225,7 @@ export default function Example() {
                 <ul role="list" className="space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900">
                   {subCategories.map((category) => (
                     <li key={category.name}>
-                      <a href={category.href}>{category.name}</a>
+                      <Link href={category.href}>{category.name}</Link>
                     </li>
                   ))}
                 </ul>

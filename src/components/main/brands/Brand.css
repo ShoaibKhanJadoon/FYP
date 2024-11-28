@@ -1,0 +1,43 @@
+.brands-logos {
+    width: 105%;
+    height: 10vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    /* Ensures scrolling content is hidden outside the viewport */
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.brands-logos h2 {
+    color: aliceblue;
+    white-space: nowrap;
+    /* Prevents text wrapping */
+    font-size: 1.5rem;
+    margin: 0 2rem;
+    /* Adds spacing between brand names */
+    padding: 0;
+}
+
+.brands-logos .scrolling {
+    display: flex;
+    position: absolute;
+    width: max-content;
+    /* Wraps the content tightly */
+    animation: scroll 30s linear infinite;
+    /* Smooth scrolling animation */
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+        /* Start at the initial position */
+    }
+
+    to {
+        transform: translateX(-100%);
+        /* Move content fully out of view */
+    }
+}

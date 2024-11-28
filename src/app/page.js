@@ -1,10 +1,9 @@
-
+import HomePage from "@/components/main/home/HomePage"
 
 const page = () => {
   return (
     <div>
-      Please Azhar Make Home Page Quickly
-      You Are To Lazy
+      <HomePage/>
     </div>
   )
 }
