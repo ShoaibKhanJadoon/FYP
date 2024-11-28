@@ -58,7 +58,7 @@ const products = [
   
           <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
             {products.map((product) => (
-              <Link key={product.id} href={`/Product/${product.id}`}>
+              <Link key={product.id} href={`/Products/Product/${product.id}`}>
               
               <div  className="group relative">
                 <img
