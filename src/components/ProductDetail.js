@@ -1,5 +1,22 @@
+"use client"
 
-const ProductDetail = (product) => {
+
+const ProductDetail = ({id}) => {
+   console.log(id)
+    
+  // // Simulate fetching product data based on the `id`
+  // const fetchProduct = async (productId) => {
+  // const response = await fetch(`http://localhost:3000/api/products/${productId}`); // Use absolute URL for fetch
+  // if (!response.ok) {
+  //   throw new Error("Failed to fetch product data");
+  // }
+  // return response.json();
+  // };
+
+  // const product = await fetchProduct(id); // Fetch the product data
+
+
+
     return (
         <div>
             <div className="bg-gray-100">
@@ -13,32 +30,32 @@ const ProductDetail = (product) => {
                                 className="w-full h-auto rounded-lg shadow-md mb-4"
                                 id="mainImage"
                             />
-                            <div className="flex gap-4 py-4 justify-center overflow-x-auto">
+                            {/* <div className="flex gap-4 py-4 justify-center overflow-x-auto">
                                 <img
                                     src="https://images.unsplash.com/photo-1505751171710-1f6d0ace5a85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxMnx8aGVhZHBob25lfGVufDB8MHx8fDE3MjEzMDM2OTB8MA&ixlib=rb-4.0.3&q=80&w=1080"
                                     alt="Thumbnail 1"
                                     className="size-16 sm:size-20 object-cover rounded-md cursor-pointer opacity-60 hover:opacity-100 transition duration-300"
-                                    onclick="changeImage(this.src)"
+                                    onClick="changeImage(this.src)"
                                 />
                                 <img
                                     src="https://images.unsplash.com/photo-1484704849700-f032a568e944?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw0fHxoZWFkcGhvbmV8ZW58MHwwfHx8MTcyMTMwMzY5MHww&ixlib=rb-4.0.3&q=80&w=1080"
                                     alt="Thumbnail 2"
                                     className="size-16 sm:size-20 object-cover rounded-md cursor-pointer opacity-60 hover:opacity-100 transition duration-300"
-                                    onclick="changeImage(this.src)"
+                                    onClick="changeImage(this.src)"
                                 />
                                 <img
                                     src="https://images.unsplash.com/photo-1496957961599-e35b69ef5d7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw4fHxoZWFkcGhvbmV8ZW58MHwwfHx8MTcyMTMwMzY5MHww&ixlib=rb-4.0.3&q=80&w=1080"
                                     alt="Thumbnail 3"
                                     className="size-16 sm:size-20 object-cover rounded-md cursor-pointer opacity-60 hover:opacity-100 transition duration-300"
-                                    onclick="changeImage(this.src)"
+                                    onClick="changeImage(this.src)"
                                 />
                                 <img
                                     src="https://images.unsplash.com/photo-1528148343865-51218c4a13e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwzfHxoZWFkcGhvbmV8ZW58MHwwfHx8MTcyMTMwMzY5MHww&ixlib=rb-4.0.3&q=80&w=1080"
                                     alt="Thumbnail 4"
                                     className="size-16 sm:size-20 object-cover rounded-md cursor-pointer opacity-60 hover:opacity-100 transition duration-300"
-                                    onclick="changeImage(this.src)"
+                                    onClick="changeImage(this.src)"
                                 />
-                            </div>
+                            </div> */}
                         </div>
                         {/* Product Details */}
                         <div className="w-full md:w-1/2 px-4">

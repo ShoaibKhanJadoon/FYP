@@ -1,10 +1,17 @@
-import ProductDetail from "@/components/ProductDetail"
+// src/app/Products/Product/[id]/page.js
+import ProductDetail from "@/components/ProductDetail";
 
- const page = (product) => {
+const Page = async ({ params }) => {
+  const  id  =(await params).id;
+  // console.log(id) 
+
   return (
     <div>
-        <ProductDetail product={product}/>
+      <ProductDetail id={id} />
     </div>
-  )
-}
-export default page
+  );
+};
+
+export default Page;
+
+

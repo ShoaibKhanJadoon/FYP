@@ -77,6 +77,14 @@ function classNames(...classes) {
 
 export default function Example() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+  const product = {
+    id: 5,
+    name: 'Basic Tee',
+    imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/product-page-01-related-product-01.jpg',
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: '$35',
+    color: 'Black',
+  };
 
   return (
 
@@ -265,7 +273,7 @@ export default function Example() {
               </form>
 
               {/* Product grid */}
-              <div className="lg:col-span-3"><ProductList/></div>
+              <div className="lg:col-span-3"><ProductList product={product}/></div>
             </div>
           </section>
         </main>
