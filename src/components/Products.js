@@ -75,7 +75,8 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function Example({category}) {
+  
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
   const product = {
     id: 5,
@@ -170,7 +171,7 @@ export default function Example() {
 
         <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 py-2">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900">New Arrivals</h1>
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900">{category}</h1>
 
             <div className="flex items-center">
               <Menu as="div" className="relative inline-block text-left">

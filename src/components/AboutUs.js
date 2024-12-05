@@ -7,14 +7,7 @@ const AboutUs = () => {
                         About Us
                     </h1>
                     <p className="font-normal text-base leading-6 text-gray-600 dark:text-white">
-                        It is a long established fact that a reader will be distracted by the
-                        readable content of a page when looking at its layout. The point of
-                        using Lorem Ipsum.In the first place we have granted to God, and by this
-                        our present charter confirmed for us and our heirs forever that the
-                        English Church shall be free, and shall have her rights entire, and her
-                        liberties inviolate; and we will that it be thus observed; which is
-                        apparent from
-                    </p>
+                    Welcome to [Your E-commerce Platform Name], where we leverage the power of artificial intelligence to enhance your online shopping experience. Our platform is designed to simplify product discovery through personalized recommendations and smart search features, making it easier than ever to find exactly what you need. Our mission is to create a seamless and enjoyable shopping journey for every customer.</p>
                 </div>
                 <div className="w-full lg:w-8/12">
                     <img
@@ -30,13 +23,9 @@ const AboutUs = () => {
                         Our Story
                     </h1>
                     <p className="font-normal text-base leading-6 text-gray-600 dark:text-white">
-                        It is a long established fact that a reader will be distracted by the
-                        readable content of a page when looking at its layout. The point of
-                        using Lorem Ipsum.In the first place we have granted to God, and by this
-                        our present charter confirmed for us and our heirs forever that the
-                        English Church shall be free, and shall have her rights entire, and her
-                        liberties inviolate; and we will that it be thus observed; which is
-                        apparent from
+                    Our journey began at COMSATS University Abbottabad, where three passionate students—Shoaib, Haris Afzal, and Azhar Elhai—came together with a shared vision. We saw the potential of AI to transform e-commerce and set out to build a user-friendly platform that caters to individual preferences. After extensive collaboration and development, [Your E-commerce Platform Name] was born. We are dedicated to revolutionizing the online shopping experience and are excited to have you join us on this journey!
+
+Feel free to adjust any part of it to better align with your project's focus!
                     </p>
                 </div>
                 <div className="w-full lg:w-8/12 lg:pt-8">

@@ -2,7 +2,7 @@
 
 
 const ProductDetail = ({id}) => {
-   console.log(id)
+  //    console.log(id)
     
   // // Simulate fetching product data based on the `id`
   // const fetchProduct = async (productId) => {

@@ -21,7 +21,7 @@ const HeroSection = () => {
               </p>
             </div>
             <div className="shop-btn" >
-              <Link className="btn" href={"/Products"}>Shop Now</Link>
+              <Link className="btn" href={"/Products/Recomended"}>Shop Now</Link>
             </div>
 
             <div className="stats">
