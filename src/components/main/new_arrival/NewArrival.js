@@ -1,10 +1,10 @@
 import React from "react";
 import "./../new_arrival/NewArrival.css";
-const NewArrival = () => {
+const NewArrival = ({props}) => {
   return (
     <div>
       <div className="container2">
-        <h2>NEW ARRIVALS</h2>
+        <h2>{props.category}</h2>
       </div>
       <div className="btn">
         <button>View All</button>
