@@ -20,8 +20,8 @@ const HeroSection = () => {
                 aspernatur quis.
               </p>
             </div>
-            <div className="shop-btn">
-              <Link href={"/Products"}>Shop Now</Link>
+            <div className="shop-btn" >
+              <Link className="btn" href={"/Products"}>Shop Now</Link>
             </div>
 
             <div className="stats">
