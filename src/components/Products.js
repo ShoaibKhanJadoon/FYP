@@ -27,12 +27,13 @@ const sortOptions = [
   { name: 'Price: High to Low', href: '#', current: false },
 ]
 const subCategories = [
-  { name: 'Totes', href: '#' },
-  { name: 'Backpacks', href: '#' },
-  { name: 'Travel Bags', href: '#' },
-  { name: 'Hip Bags', href: '#' },
-  { name: 'Laptop Sleeves', href: '#' },
-]
+  { name: "Men's Shirts", href: '#' },
+  { name: "Women's Shirts", href: '#' },
+  { name: "Men's Pants", href: '#' },
+  { name: "Women's Pants", href: '#' },
+  { name: "Casual Wear", href: '#' },
+];
+
 const filters = [
   {
     id: 'color',
