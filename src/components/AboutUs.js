@@ -7,7 +7,7 @@ const AboutUs = () => {
                         About Us
                     </h1>
                     <p className="font-normal text-base leading-6 text-gray-600 dark:text-white">
-                    </p>
+                    Welcome to [Your E-commerce Platform Name], where we leverage artificial intelligence to enhance your online shopping experience. Our platform simplifies product discovery through personalized recommendations and smart search features, making shopping convenient and enjoyable for every customer.</p>
                 </div>
                 <div className="w-full lg:w-8/12">
                     <img
@@ -23,7 +23,7 @@ const AboutUs = () => {
                         Our Story
                     </h1>
                     <p className="font-normal text-base leading-6 text-gray-600 dark:text-white">
-                    
+                    Our journey began at COMSATS University Abbottabad, where three passionate students—Shoaib Khan Jadoon, Haris Afzal, and Azhar Elhai—came together with a vision to transform e-commerce through AI. After extensive collaboration, we launched [Your E-commerce Platform Name], designed to cater to individual preferences and revolutionize online shopping. We’re excited to have you join us on this journey!
                     </p>
                 </div>
                 <div className="w-full lg:w-8/12 lg:pt-8">
