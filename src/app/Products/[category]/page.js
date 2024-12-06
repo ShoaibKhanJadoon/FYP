@@ -6,7 +6,7 @@ const page = async ({params}) => {
 
   return (
     <div>
-        <Products category={category} />
+        <Products productCategory={category} />
     </div>
   )
 }
