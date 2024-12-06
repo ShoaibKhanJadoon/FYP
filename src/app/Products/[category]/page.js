@@ -2,7 +2,10 @@ import React from 'react'
 import Products from "@/components/Products"
 
 const page = async ({params}) => {
-  const category=(await params).category;
+  let category=(await params).category;
+  if(!category){
+    category="Recomended"
+  }
 
   return (
     <div>
