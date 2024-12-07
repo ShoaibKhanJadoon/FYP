@@ -27,11 +27,11 @@ const sortOptions = [
   { name: 'Price: High to Low', href: '#', current: false },
 ]
 const subCategories = [
-  { name: "Men's Shirts", href: '#' },
-  { name: "Women's Shirts", href: '#' },
-  { name: "Men's Pants", href: '#' },
-  { name: "Women's Pants", href: '#' },
-  { name: "Casual Wear", href: '#' },
+  { name: "Men's Shirts", href: "/Products/Men's Shirts" },
+  { name: "Women's Shirts", href: "/Products/Women's Shirts" },
+  { name: "Men's Pants", href: "/Products/Men's Pants" },
+  { name: "Women's Pants", href: "/Products/Women's Pants" },
+  { name: "Casual Wear", href: "/Products/Casual Wear" },
 ];
 
 const filters = [
@@ -78,15 +78,28 @@ function classNames(...classes) {
 
 export default function Example({productCategory}) {
   
-  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
-  const product = {
-    id: 5,
-    name: 'Basic Tee',
-    imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/product-page-01-related-product-01.jpg',
-    imageAlt: "Front of men's Basic Tee in black.",
-    price: '$35',
-    color: 'Black',
+  const [selectedFilters, setSelectedFilters] = useState({});
+
+  const handleFilterChange = (sectionId, optionValue) => {
+    setSelectedFilters((prev) => {
+      const currentOptions = prev[sectionId] || [];
+      if (currentOptions.includes(optionValue)) {
+        return {
+          ...prev,
+          [sectionId]: currentOptions.filter((value) => value !== optionValue),
+        };
+      } else {
+        return {
+          ...prev,
+          [sectionId]: [...currentOptions, optionValue],
+        };
+      }
+    });
   };
+  // console.log(selectedFilters)
+  
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+  
 
   return (
 
@@ -151,6 +164,7 @@ export default function Example({productCategory}) {
                               id={`filter-mobile-${section.id}-${optionIdx}`}
                               name={`${section.id}[]`}
                               type="checkbox"
+                              onChange={() => handleFilterChange(section.id, option.value)}
                               className="size-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                             />
                             <label
@@ -275,7 +289,7 @@ export default function Example({productCategory}) {
               </form>
 
               {/* Product grid */}
-              <div className="lg:col-span-3"><ProductList product={product}/></div>
+              <div className="lg:col-span-3"><ProductList filters={selectedFilters}/></div>
             </div>
           </section>
         </main>
