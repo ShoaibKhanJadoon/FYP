@@ -2,8 +2,7 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
-import { useState } from 'react'
-import Cart from "@/components/Cart"
+
 
 const navigation = [
   { name: 'Home', href: '/', current: false },
@@ -16,8 +15,8 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
-  const [viewCart,setViewCart]=useState(false)
+export default function Navigation({ toggleCart }) {
+  
   return (
     <>    
     <Disclosure as="nav" className="bg-white">
@@ -62,7 +61,7 @@ export default function Example() {
             <button
               type="button"
               className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-              onClick={()=>setViewCart(!viewCart)}
+              onClick={toggleCart}
             >
               <span className="absolute -inset-1.5" />
               <span className="sr-only">View Cart</span>
@@ -148,12 +147,7 @@ export default function Example() {
         </div>
       </DisclosurePanel>
     </Disclosure>
-    {/* Cart display */}
-    <div className={`${viewCart?"block":"hidden"} `}>
-      <Cart />
-    </div>
     
-
     </>
   )
 }

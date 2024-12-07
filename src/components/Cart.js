@@ -1,15 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function AddToCart({ viewCart }) {
+
+function Cart({ viewCart, toggleCart }) {
   return (
     <>
       <div
-        className={`${viewCart ? "right-0" : ""} w-full h-full bg-black dark:bg-gray-900 bg-opacity-90 top-0 overflow-y-auto overflow-x-hidden fixed sticky-0`}
+        className={`fixed top-0 w-full h-full bg-black dark:bg-gray-900 bg-opacity-90 overflow-y-auto overflow-x-hidden transition-all duration-500 ${viewCart ? "right-0" : "-right-full"
+          }`}
         id="chec-div"
       >
-        {/*- more free and premium Tailwind CSS components at https://tailwinduikit.com/ -*/}
         <div
-          className="w-full absolute z-10 right-0 h-full overflow-x-hidden transform translate-x-0 transition ease-in-out duration-700"
+          className="w-full relative  right-0 h-full overflow-x-hidden transform translate-x-0 transition ease-in-out duration-700"
           id="checkout"
         >
           <div
@@ -22,7 +23,7 @@ function AddToCart({ viewCart }) {
             >
               <div
                 className="flex items-center text-gray-500 hover:text-gray-600 dark:text-white cursor-pointer"
-              // onclick
+                onClick={toggleCart}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -262,7 +263,7 @@ function AddToCart({ viewCart }) {
               "\n    /* width */\n    #scroll::-webkit-scrollbar {\n      width: 1px;\n    }\n\n    /* Track */\n    #scroll::-webkit-scrollbar-track {\n      background: #f1f1f1;\n    }\n\n    /* Handle */\n    #scroll::-webkit-scrollbar-thumb {\n      background: rgb(133, 132, 132);\n    }\n  "
           }}
         />
-      </div>
+      </div >
 
     </>
 
@@ -271,4 +272,4 @@ function AddToCart({ viewCart }) {
   )
 }
 
-export default AddToCart
+export default Cart
