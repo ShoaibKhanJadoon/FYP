@@ -10,7 +10,7 @@ const Footer = () => {
         <h2 id="footer-heading" className="sr-only">
           Footer
         </h2>
-        <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+        <div className="mx-auto max-w-7xl px-6 pb-8 pt-8 sm:pt-24 lg:px-8 lg:pt-16">
           <div className="xl:grid xl:grid-cols-3 xl:gap-8">
             <div className="space-y-8">
               <img
@@ -19,7 +19,7 @@ const Footer = () => {
                 alt="Company name"
               />
               <p className="text-sm leading-6 text-gray-600">
-                Making football look better to the world and a more respecful game.
+              Your style, your choice - shopping made simple.
               </p>
               <div className="flex space-x-6">
                 <a href="#" className="text-gray-400 hover:text-gray-500">
