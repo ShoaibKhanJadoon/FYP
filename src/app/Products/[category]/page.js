@@ -2,9 +2,11 @@ import React from 'react'
 import Products from "@/components/Products"
 
 // const page = () => {
-  const page =async (params)=>{
+  const page =async ({params})=>{
 
-  let category=(await params).category;
+  let categoryencoded=(await params).category;
+
+  let category = decodeURIComponent(categoryencoded);
   console.log("shoaib khan="+category)
   
   
