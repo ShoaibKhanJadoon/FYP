@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const ProductList = ({ filters }) => {
   // apply the fetch request here
-  const product =[{
+  const products =[{
     id: 5,
     name: 'Basic Tee',
     imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/product-page-01-related-product-01.jpg',
@@ -12,15 +12,15 @@ const ProductList = ({ filters }) => {
     price: '$35',
     color: 'Black',
   },]
-  console.log(filters)
+  console.log("filter"+filters)
 
-  const filteredProducts = product.filter((product) => {
+  const filteredProducts = products.filter((product) => {
     const productMatches = Object.entries(filters).every(([sectionId, values]) => {
       return values.length === 0 || values.includes(product[sectionId]);
     });
     return productMatches;
   }); 
-  // console.log(filteredProducts)
+  console.log("filter products"+filteredProducts)
 
   return (
     <div className="bg-white" >

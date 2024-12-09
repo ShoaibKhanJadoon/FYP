@@ -1,12 +1,12 @@
 import React from 'react'
 import Products from "@/components/Products"
 
-const page = () => {
-  // const page =async ({params})=>{}
+// const page = () => {
+  const page =async (params)=>{
 
-  // let category=(await params).category;
-  // console.log("shoaib khan="+category)
-  const category="Recomended"
+  let category=(await params).category;
+  console.log("shoaib khan="+category)
+  
   
 
   return (

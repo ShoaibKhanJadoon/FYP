@@ -76,11 +76,12 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example({productCategory}) {
+export default function Products({productCategory}) {
   
   const [selectedFilters, setSelectedFilters] = useState({});
 
   const handleFilterChange = (sectionId, optionValue) => {
+    
     setSelectedFilters((prev) => {
       const currentOptions = prev[sectionId] || [];
       if (currentOptions.includes(optionValue)) {
@@ -96,7 +97,7 @@ export default function Example({productCategory}) {
       }
     });
   };
-  // console.log(selectedFilters)
+  console.log(selectedFilters)
   
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
   
