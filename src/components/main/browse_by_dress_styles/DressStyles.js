@@ -3,7 +3,7 @@ import "./../browse_by_dress_styles/Styles.css";
 const DressStyles = () => {
   return (
     <div>
-      <h1>BROWSE BY DRESS STYLES</h1>
+      <h1 className="flex justify-center items-center md:text-3xl text-2xl font-bold">BROWSE BY DRESS STYLES</h1>
       <div className="container3">
         <div className="categories">
           <div className="upper-div">

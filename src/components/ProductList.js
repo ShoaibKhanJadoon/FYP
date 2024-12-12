@@ -4,32 +4,49 @@ import Link from 'next/link';
 
 const ProductList = ({ filters }) => {
   // apply the fetch request here
-  const products =[{
+  const Products =[{
     id: 5,
     name: 'Basic Tee',
     imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/product-page-01-related-product-01.jpg',
     imageAlt: "Front of men's Basic Tee in black.",
     price: '$35',
     color: 'Black',
+  },
+  {
+    id: 6,
+    name: 'Basic Tee',
+    imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/product-page-01-related-product-01.jpg',
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: '$35',
+    color: 'Black',
+  },
+  {
+    id: 7,
+    name: 'Basic Tee',
+    imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/product-page-01-related-product-01.jpg',
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: '$35',
+    color: 'Black',
   },]
-  console.log("filter"+filters)
+  
+  // console.log("filter"+filters)
 
-  const filteredProducts = products.filter((product) => {
-    const productMatches = Object.entries(filters).every(([sectionId, values]) => {
-      return values.length === 0 || values.includes(product[sectionId]);
-    });
-    return productMatches;
-  }); 
-  console.log("filter products"+filteredProducts)
+  // const filteredProducts = products.filter((product) => {
+  //   const productMatches = Object.entries(filters).every(([sectionId, values]) => {
+  //     return values.length === 0 || values.includes(product[sectionId]);
+  //   });
+  //   return productMatches;
+  // }); 
+  // console.log("filter products"+filteredProducts)
 
   return (
-    <div className="bg-white" >
+    <div className="bg-white " >
       <div className="mx-auto max-w-2xl   lg:max-w-7xl lg:px-8">
         <h2 className="text-2xl font-bold tracking-tight text-gray-900">Customers also purchased</h2>
 
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-
-        {filteredProducts.map((product) => (
+        {console.log(Products)}
+        {Products.map((product) => (
             <Link key={product.id} href={`/Products/Product/${product.id}`}>
               <div className="group relative">
                 <img

@@ -1,8 +1,11 @@
 "use client"
+import { useCart } from "./CartContext";
 
 
 const ProductDetail = ({id}) => {
-  //    console.log(id)
+    const { addToCart } = useCart();
+    const product={id:id}
+  console.log(id)
     
   // // Simulate fetching product data based on the `id`
   // const fetchProduct = async (productId) => {
@@ -158,7 +161,9 @@ const ProductDetail = ({id}) => {
                                 />
                             </div>
                             <div className="flex space-x-4 mb-6">
-                                <button className="bg-indigo-600 flex gap-2 items-center text-white px-6 py-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                <button className="bg-indigo-600 flex gap-2 items-center text-white px-6 py-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                                onClick={() => addToCart(product)}
+                                >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
@@ -175,7 +180,7 @@ const ProductDetail = ({id}) => {
                                     </svg>
                                     Add to Cart
                                 </button>
-                                <button className="bg-gray-200 flex gap-2 items-center  text-gray-800 px-6 py-2 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
+                                {/* <button className="bg-gray-200 flex gap-2 items-center  text-gray-800 px-6 py-2 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
@@ -191,7 +196,7 @@ const ProductDetail = ({id}) => {
                                         />
                                     </svg>
                                     Wishlist
-                                </button>
+                                </button> */}
                             </div>
                             <div>
                                 <h3 className="text-lg font-semibold mb-2">Key Features:</h3>

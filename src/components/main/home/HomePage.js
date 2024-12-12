@@ -3,6 +3,7 @@ import HeroSection from "../hero_section/HeroSection";
 import Brands from "../brands/Brands";
 import NewArrival from "../new_arrival/NewArrival";
 import DressStyles from "../browse_by_dress_styles/DressStyles";
+import Review from "../reviews/ReviewCards"
 
 const Home = () => {
   const product = [{
@@ -41,9 +42,11 @@ const Home = () => {
     <div>
       <HeroSection />
       <Brands />
-      <NewArrival products={product}/>
-      <NewArrival products={product}/>
+      <NewArrival products={product} category={"NEW ARRIVALS"} />
+      <NewArrival products={product}  category={"TOP SELLING"} />
       <DressStyles />
+      <Review/>
+
     </div>
   );
 };

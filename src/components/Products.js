@@ -2,7 +2,7 @@
 import ProductList from "./ProductList"
 import Link from 'next/link';
 
-import { useState } from 'react'
+import { useState } from "react";
 import {
   Dialog,
   DialogBackdrop,
@@ -82,7 +82,7 @@ export default function Products({productCategory}) {
   const [selectedFilters, setSelectedFilters] = useState({});
 
   const handleFilterChange = (sectionId, optionValue) => {
-    
+  console.log(sectionId,optionValue)
     setSelectedFilters((prev) => {
       const currentOptions = prev[sectionId] || [];
       if (currentOptions.includes(optionValue)) {
@@ -162,7 +162,7 @@ export default function Products({productCategory}) {
                           <div key={option.value} className="flex items-center">
                             <input
                               defaultValue={option.value}
-                              defaultChecked={option.checked}
+                              
                               id={`filter-mobile-${section.id}-${optionIdx}`}
                               name={`${section.id}[]`}
                               type="checkbox"
@@ -291,7 +291,7 @@ export default function Products({productCategory}) {
               </form>
 
               {/* Product grid */}
-              <div className="lg:col-span-3"><ProductList filters={selectedFilters}/></div>
+              <div className="lg:col-span-3 z-0"><ProductList filters={selectedFilters}/></div>
             </div>
           </section>
         </main>
