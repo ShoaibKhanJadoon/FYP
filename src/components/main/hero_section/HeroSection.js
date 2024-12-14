@@ -14,14 +14,12 @@ const HeroSection = () => {
               </h2>
             </div>
             <div className="description">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-                sint tenetur eos ipsam repellat non illum nobis voluptatibus,
-                aspernatur quis.
+              <p className="text-xl ">
+              Discover a wide range of stylish and comfortable clothing tailored to your unique preferences. Whether you're looking for everyday essentials or statement pieces, we’ve got you covered with quality and elegance in every stitch.
               </p>
             </div>
             <div className="shop-btn" >
-              <Link className="btn" href={"/Products/Recomended"}>Shop Now</Link>
+              <Link className="btn" href={"/Products/Recomended Products"}>Shop Now</Link>
             </div>
 
             <div className="stats">

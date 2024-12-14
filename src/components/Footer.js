@@ -1,5 +1,7 @@
 "use client"
 import React from 'react';
+import logo from "@/images/logo.jpeg"
+import Image from 'next/image';
 
 const Footer = () => {
 
@@ -13,13 +15,14 @@ const Footer = () => {
         <div className="mx-auto max-w-7xl px-6 pb-8 pt-8 sm:pt-24 lg:px-8 lg:pt-16">
           <div className="xl:grid xl:grid-cols-3 xl:gap-8">
             <div className="space-y-8">
-              <img
-                className="h-20"
-                src="https://aaah0mnbncqtinas.public.blob.vercel-storage.com/FX5ATkass4-no-background-VmcZHSX7xE4ng29ATNphGUdb388fxH.png"
-                alt="Company name"
+              <Image
+                alt="Your Company"
+                src={logo}
+                className="h-20 w-auto rounded-full"
+                priority
               />
               <p className="text-sm leading-6 text-gray-600">
-              Your style, your choice - shopping made simple.
+                Your style, your choice - shopping made simple.
               </p>
               <div className="flex space-x-6">
                 <a href="#" className="text-gray-400 hover:text-gray-500">

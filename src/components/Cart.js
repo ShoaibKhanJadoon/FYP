@@ -52,7 +52,7 @@ function Cart({ viewCart, toggleCart }) {
               </p>
               <div className='overflow-x-hidden overflow-y-scroll w-full h-full mb-10'>
                 {cartItems.length === 0 ? (
-                  <p>Your cart is empty.</p>
+                  <p className="mt-4 text-xl font-bold">Your Cart is Empty.</p>
                 ) : (
                   <ul>
                     {cartItems.map((item) => (
