@@ -7,13 +7,10 @@ import Products from "@/components/Products"
   let categoryencoded=(await params).category;
 
   let category = decodeURIComponent(categoryencoded);
-  console.log("shoaib khan="+category)
   
-  
-
   return (
     <div>
-        <Products productCategory={category} />
+        <Products selectedCategory={category} />
     </div>
   )
 }

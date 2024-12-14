@@ -2,8 +2,7 @@
 import ProductDetail from "@/components/ProductDetail";
 
 const Page = async ({ params }) => {
-  const  id  =(await params).id;
-  // console.log(id) 
+  const  id  =(await params).id; 
 
   return (
     <div>

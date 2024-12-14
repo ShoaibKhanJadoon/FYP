@@ -5,7 +5,7 @@ import { useCart } from "./CartContext";
 const ProductDetail = ({id}) => {
     const { addToCart } = useCart();
     const product={id:id}
-  console.log(id)
+  
     
   // // Simulate fetching product data based on the `id`
   // const fetchProduct = async (productId) => {

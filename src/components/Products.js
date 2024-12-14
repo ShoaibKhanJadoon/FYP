@@ -77,12 +77,22 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Products({productCategory}) {
-  
+import { ProductsData } from "@/data/data"
+
+export default function Products({ selectedCategory }) {
+
+  const productscategory = ProductsData.filter(
+    (product) =>
+      selectedCategory === "Recomended Products" || product.category === selectedCategory
+  );
+
+
+
   const [selectedFilters, setSelectedFilters] = useState({});
 
   const handleFilterChange = (sectionId, optionValue) => {
-  console.log(sectionId,optionValue)
+    console.log("handle change filter" + sectionId, optionValue)
+
     setSelectedFilters((prev) => {
       const currentOptions = prev[sectionId] || [];
       if (currentOptions.includes(optionValue)) {
@@ -99,14 +109,14 @@ export default function Products({productCategory}) {
     });
   };
   console.log(selectedFilters)
-  
+
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
-  
+
 
   return (
 
     <div className="bg-white">
-      
+
       <div>
         {/* Mobile filter dialog */}
         <Dialog open={mobileFiltersOpen} onClose={setMobileFiltersOpen} className="relative z-40 lg:hidden">
@@ -162,13 +172,15 @@ export default function Products({productCategory}) {
                           <div key={option.value} className="flex items-center">
                             <input
                               defaultValue={option.value}
-                              
+
                               id={`filter-mobile-${section.id}-${optionIdx}`}
                               name={`${section.id}[]`}
                               type="checkbox"
                               onChange={() => handleFilterChange(section.id, option.value)}
+
                               className="size-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                             />
+
                             <label
                               htmlFor={`filter-mobile-${section.id}-${optionIdx}`}
                               className="ml-3 min-w-0 flex-1 text-gray-500"
@@ -188,7 +200,7 @@ export default function Products({productCategory}) {
 
         <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 py-2">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900">{productCategory}</h1>
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900">{selectedCategory}</h1>
 
             <div className="flex items-center">
               <Menu as="div" className="relative inline-block text-left">
@@ -277,6 +289,8 @@ export default function Products({productCategory}) {
                               id={`filter-${section.id}-${optionIdx}`}
                               name={`${section.id}[]`}
                               type="checkbox"
+                              onChange={() => handleFilterChange(section.id, option.value)}
+
                               className="size-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                             />
                             <label htmlFor={`filter-${section.id}-${optionIdx}`} className="ml-3 text-sm text-gray-600">
@@ -291,12 +305,14 @@ export default function Products({productCategory}) {
               </form>
 
               {/* Product grid */}
-              <div className="lg:col-span-3 z-0"><ProductList filters={selectedFilters}/></div>
+              <div className="lg:col-span-3 z-0">
+                <ProductList filters={selectedFilters} products={productscategory } />
+              </div>
             </div>
           </section>
         </main>
       </div>
-      
+
     </div>
   )
 }
