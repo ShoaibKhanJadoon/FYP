@@ -7,6 +7,9 @@ export const ProductsData = [
         imageAlt: "Plaid shirt hanging on a rack",
         price: "$35",
         category: "Men's Shirts",
+        colors: ["White", "Beige", "Blue"],
+        categories: ["New Arrivals", "Sale"],
+        sizes: ["12L", "18L"],
     },
     {
         id: 2,
@@ -15,6 +18,9 @@ export const ProductsData = [
         imageAlt: "Denim shirt folded neatly",
         price: "$40",
         category: "Men's Shirts",
+        colors: ["Blue", "Brown"],
+        categories: ["Travel", "Accessories"],
+        sizes: ["6L", "18L"],
     },
     {
         id: 4,
@@ -23,6 +29,9 @@ export const ProductsData = [
         imageAlt: "Plaid shirt hanging on a rack",
         price: "$35",
         category: "Men's Shirts",
+        colors: ["White", "Blue"],
+        categories: ["New Arrivals"],
+        sizes: ["18L", "20L"],
     },
     {
         id: 5,
@@ -31,6 +40,9 @@ export const ProductsData = [
         imageAlt: "Denim shirt folded neatly",
         price: "$40",
         category: "Men's Shirts",
+        colors: ["Beige", "Blue"],
+        categories: ["Organization", "Accessories"],
+        sizes: ["2L", "12L"],
     },
     {
         id: 6,
@@ -39,6 +51,9 @@ export const ProductsData = [
         imageAlt: "Striped shirt displayed on a mannequin",
         price: "$38",
         category: "Men's Shirts",
+        colors: ["White", "Purple"],
+        categories: ["Sale", "Accessories"],
+        sizes: ["12L", "40L"],
     },
     // Women's Shirts
     {
@@ -48,6 +63,9 @@ export const ProductsData = [
         imageAlt: "Floral print blouse laid on a bed",
         price: "$25",
         category: "Women's Shirts",
+        colors: ["Green", "Purple"],
+        categories: ["New Arrivals", "Travel"],
+        sizes: ["6L", "20L"],
     },
     {
         id: 8,
@@ -56,6 +74,9 @@ export const ProductsData = [
         imageAlt: "Oversized sweater on a flat lay",
         price: "$30",
         category: "Women's Shirts",
+        colors: ["White", "Beige"],
+        categories: ["Organization", "Sale"],
+        sizes: ["18L", "40L"],
     },
     {
         id: 9,
@@ -64,6 +85,9 @@ export const ProductsData = [
         imageAlt: "Satin blouse hanging on a rack",
         price: "$50",
         category: "Women's Shirts",
+        colors: ["Purple", "Green"],
+        categories: ["Accessories", "Travel"],
+        sizes: ["2L", "6L"],
     },
     // Men's Pants
     {
@@ -73,6 +97,9 @@ export const ProductsData = [
         imageAlt: "Black jeans on a hanger",
         price: "$50",
         category: "Men's Pants",
+        colors: ["Black", "Blue"],
+        categories: ["Sale", "Travel"],
+        sizes: ["6L", "20L"],
     },
     {
         id: 11,
@@ -81,6 +108,9 @@ export const ProductsData = [
         imageAlt: "Khaki chinos folded on a table",
         price: "$45",
         category: "Men's Pants",
+        colors: ["Beige", "Brown"],
+        categories: ["New Arrivals", "Accessories"],
+        sizes: ["12L", "40L"],
     },
     {
         id: 12,
@@ -89,6 +119,9 @@ export const ProductsData = [
         imageAlt: "Jogger pants folded on a shelf",
         price: "$35",
         category: "Men's Pants",
+        colors: ["White", "Green"],
+        categories: ["Sale", "Organization"],
+        sizes: ["2L", "18L"],
     },
     // Women's Pants
     {
@@ -98,6 +131,9 @@ export const ProductsData = [
         imageAlt: "High-waist trousers on a hanger",
         price: "$60",
         category: "Women's Pants",
+        colors: ["Brown", "Purple"],
+        categories: ["New Arrivals", "Travel"],
+        sizes: ["6L", "20L"],
     },
     {
         id: 14,
@@ -106,6 +142,9 @@ export const ProductsData = [
         imageAlt: "Flared leggings displayed on a mannequin",
         price: "$35",
         category: "Women's Pants",
+        colors: ["Green", "Blue"],
+        categories: ["Accessories", "Sale"],
+        sizes: ["12L", "18L"],
     },
     {
         id: 15,
@@ -114,101 +153,10 @@ export const ProductsData = [
         imageAlt: "Lounge pants folded on a flat lay",
         price: "$25",
         category: "Women's Pants",
-    },
-    // Casual Wear
-    {
-        id: 16,
-        name: "Cotton Joggers",
-        imageSrc: "https://unsplash.com/photos/ZCQ3fAEO0dg/download?force=true",
-        imageAlt: "Cotton joggers folded neatly",
-        price: "$30",
-        category: "Casual Wear",
-    },
-    {
-        id: 17,
-        name: "Relaxed Hoodie",
-        imageSrc: "https://unsplash.com/photos/2EJCSULRwC8/download?force=true",
-        imageAlt: "Hoodie lying on a couch",
-        price: "$40",
-        category: "Casual Wear",
-    },
-    {
-        id: 18,
-        name: "Trendy Graphic Tee",
-        imageSrc: "https://unsplash.com/photos/Iv96GFPN8o8/download?force=true",
-        imageAlt: "Graphic tee displayed on a flat lay",
-        price: "$20",
-        category: "Casual Wear",
-    },
-
-    // Women's Shirts
-    {
-        id: 3,
-        name: "Floral Print Blouse",
-        imageSrc: "https://unsplash.com/photos/UMmxplTzVNI/download?force=true",
-        imageAlt: "Floral print blouse laid on a bed",
-        price: "$25",
-        category: "Women's Shirts",
-    },
-    {
-        id: 19,
-        name: "Oversized Sweater",
-        imageSrc: "https://unsplash.com/photos/FJ6TwZ34i9k/download?force=true",
-        imageAlt: "Oversized sweater on a flat lay",
-        price: "$30",
-        category: "Women's Shirts",
-    },
-    // Men's Pants
-    {
-        id: 20,
-        name: "Classic Black Jeans",
-        imageSrc: "https://unsplash.com/photos/GdwZvEl2rwc/download?force=true",
-        imageAlt: "Black jeans on a hanger",
-        price: "$50",
-        category: "Men's Pants",
-    },
-    {
-        id: 21,
-        name: "Khaki Chinos",
-        imageSrc: "https://unsplash.com/photos/5Iu1Ga-_tXk/download?force=true",
-        imageAlt: "Khaki chinos folded on a table",
-        price: "$45",
-        category: "Men's Pants",
-    },
-    // Women's Pants
-    {
-        id: 22,
-        name: "High-Waist Trousers",
-        imageSrc: "https://unsplash.com/photos/N_F14XF5tso/download?force=true",
-        imageAlt: "High-waist trousers on a hanger",
-        price: "$60",
-        category: "Women's Pants",
-    },
-    {
-        id: 23,
-        name: "Flared Leggings",
-        imageSrc: "https://unsplash.com/photos/tTw9RZDN3Rw/download?force=true",
-        imageAlt: "Flared leggings displayed on a mannequin",
-        price: "$35",
-        category: "Women's Pants",
-    },
-    // Casual Wear
-    {
-        id: 24,
-        name: "Cotton Joggers",
-        imageSrc: "https://unsplash.com/photos/ZCQ3fAEO0dg/download?force=true",
-        imageAlt: "Cotton joggers folded neatly",
-        price: "$30",
-        category: "Casual Wear",
-    },
-    {
-        id: 25,
-        name: "Relaxed Hoodie",
-        imageSrc: "https://unsplash.com/photos/2EJCSULRwC8/download?force=true",
-        imageAlt: "Hoodie lying on a couch",
-        price: "$40",
-        category: "Casual Wear",
-    },
+        colors: ["White", "Beige"],
+        categories: ["Organization", "Sale"],
+        sizes: ["40L", "6L"],
+    }
 ];
 
 

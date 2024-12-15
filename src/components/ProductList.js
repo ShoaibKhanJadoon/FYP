@@ -4,15 +4,20 @@ import Link from 'next/link';
 
 const ProductList = ({ filters, products}) => {
   // apply the fetch request here
-  // console.log("filter"+filters)
+  console.log("filter"+filters)
 
-  // const filteredProducts = products.filter((product) => {
-  //   const productMatches = Object.entries(filters).every(([sectionId, values]) => {
-  //     return values.length === 0 || values.includes(product[sectionId]);
-  //   });
-  //   return productMatches;
-  // }); 
-  // console.log("filter products"+filteredProducts)
+  const filteredProducts = products.filter((product) => {
+    // Iterate over each filter section and check if product matches
+    return Object.entries(filters).every(([sectionId, values]) => {
+        // If no values are selected for this section, don't filter
+        if (values.length === 0) return true;
+
+        // Check if product's attribute includes any of the selected filter values
+        return values.some((value) => product[sectionId]?.includes(value));
+    });
+});
+
+  console.log("filter products"+filteredProducts)
 
   return (
     <div className="bg-white " >
@@ -21,7 +26,7 @@ const ProductList = ({ filters, products}) => {
 
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
         
-        {products.map((product) => (
+        { filteredProducts.map((product) => (
             <Link key={product.id} href={`/Products/Product/${product.id}`}>
               <div className="group relative">
                 <img

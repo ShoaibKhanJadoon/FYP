@@ -20,9 +20,9 @@ import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from
 
 
 const sortOptions = [
-  { name: 'Most Popular', href: '#', current: true },
-  { name: 'Best Rating', href: '#', current: false },
-  { name: 'Newest', href: '#', current: false },
+  // { name: 'Most Popular', href: '#', current: true },
+  // { name: 'Best Rating', href: '#', current: false },
+  // { name: 'Newest', href: '#', current: false },
   { name: 'Price: Low to High', href: '#', current: false },
   { name: 'Price: High to Low', href: '#', current: false },
 ]
@@ -37,41 +37,43 @@ const subCategories = [
 
 const filters = [
   {
-    id: 'color',
+    id: 'colors', // Match the product attribute 'colors'
     name: 'Color',
     options: [
-      { value: 'white', label: 'White', checked: false },
-      { value: 'beige', label: 'Beige', checked: false },
-      { value: 'blue', label: 'Blue', checked: false },
-      { value: 'brown', label: 'Brown', checked: false },
-      { value: 'green', label: 'Green', checked: false },
-      { value: 'purple', label: 'Purple', checked: false },
+      { value: 'White', label: 'White', checked: false },
+      { value: 'Beige', label: 'Beige', checked: false },
+      { value: 'Blue', label: 'Blue', checked: false },
+      { value: 'Brown', label: 'Brown', checked: false },
+      { value: 'Green', label: 'Green', checked: false },
+      { value: 'Purple', label: 'Purple', checked: false },
+      { value: 'Black', label: 'Black', checked: false }, // Add missing color
     ],
   },
   {
-    id: 'category',
+    id: 'categories', // Match the product attribute 'categories'
     name: 'Category',
     options: [
-      { value: 'new-arrivals', label: 'New Arrivals', checked: false },
-      { value: 'sale', label: 'Sale', checked: false },
-      { value: 'travel', label: 'Travel', checked: false },
-      { value: 'organization', label: 'Organization', checked: false },
-      { value: 'accessories', label: 'Accessories', checked: false },
+      { value: 'New Arrivals', label: 'New Arrivals', checked: false }, // Adjust value to match product data
+      { value: 'Sale', label: 'Sale', checked: false },
+      { value: 'Travel', label: 'Travel', checked: false },
+      { value: 'Organization', label: 'Organization', checked: false },
+      { value: 'Accessories', label: 'Accessories', checked: false },
     ],
   },
   {
-    id: 'size',
+    id: 'sizes', // Match the product attribute 'sizes'
     name: 'Size',
     options: [
-      { value: '2l', label: '2L', checked: false },
-      { value: '6l', label: '6L', checked: false },
-      { value: '12l', label: '12L', checked: false },
-      { value: '18l', label: '18L', checked: false },
-      { value: '20l', label: '20L', checked: false },
-      { value: '40l', label: '40L', checked: false },
+      { value: '2L', label: '2L', checked: false },
+      { value: '6L', label: '6L', checked: false },
+      { value: '12L', label: '12L', checked: false },
+      { value: '18L', label: '18L', checked: false },
+      { value: '20L', label: '20L', checked: false },
+      { value: '40L', label: '40L', checked: false },
     ],
   },
-]
+];
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -81,6 +83,37 @@ import { ProductsData } from "@/data/data"
 
 export default function Products({ selectedCategory }) {
 
+  // sorting
+  const [sortOption, setSortOption] = useState(sortOptions[0].name);
+
+  const handleSortSelection = (selectedName) => {
+    setSortOption(selectedName);
+    sortOptions.forEach((option) => {
+      option.current = option.name === selectedName;
+    });
+  };
+
+  const sortProducts = (products, sortOption) => {
+    switch (sortOption) {
+      // case 'Most Popular':
+      //   // Assuming you have a popularity metric in your product data
+      //   return [...products].sort((a, b) => b.popularity - a.popularity);
+      // case 'Best Rating':
+      //   // Assuming you have a rating metric in your product data
+      //   return [...products].sort((a, b) => b.rating - a.rating);
+      // case 'Newest':
+      //   // Assuming each product has a `releaseDate` field
+      //   return [...products].sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate));
+      case 'Price: Low to High':
+        return [...products].sort((a, b) => parseFloat(a.price.slice(1)) - parseFloat(b.price.slice(1)));
+      case 'Price: High to Low':
+        return [...products].sort((a, b) => parseFloat(b.price.slice(1)) - parseFloat(a.price.slice(1)));
+      default:
+        return products;
+    }
+  };
+
+  // applying category filters
   const productscategory = ProductsData.filter(
     (product) =>
       selectedCategory === "Recomended Products" || product.category === selectedCategory
@@ -109,10 +142,10 @@ export default function Products({ selectedCategory }) {
     });
   };
   console.log(selectedFilters)
+  const sortedProducts = sortProducts(productscategory, sortOption);
+
 
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
-
-
   return (
 
     <div className="bg-white">
@@ -221,7 +254,8 @@ export default function Products({ selectedCategory }) {
                   <div className="py-1">
                     {sortOptions.map((option) => (
                       <MenuItem key={option.name}>
-                        <Link
+                        {/* <Link
+                          
                           href={option.href}
                           className={classNames(
                             option.current ? 'font-medium text-gray-900' : 'text-gray-500',
@@ -229,7 +263,14 @@ export default function Products({ selectedCategory }) {
                           )}
                         >
                           {option.name}
-                        </Link>
+                        </Link> */}
+                        <button
+                          onClick={() => handleSortSelection(option.name)}
+                          className={classNames(
+                            option.current ? 'font-medium text-gray-900' : 'text-gray-500',
+                            'block px-4 py-2 text-sm data-[focus]:bg-gray-100 data-[focus]:outline-none'
+                          )}
+                        >{option.name}</button>
                       </MenuItem>
                     ))}
                   </div>
@@ -306,7 +347,7 @@ export default function Products({ selectedCategory }) {
 
               {/* Product grid */}
               <div className="lg:col-span-3 z-0">
-                <ProductList filters={selectedFilters} products={productscategory } />
+                <ProductList filters={selectedFilters} products={sortedProducts} />
               </div>
             </div>
           </section>
