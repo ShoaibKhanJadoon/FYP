@@ -231,7 +231,7 @@ export default function Products({ selectedCategory }) {
           </div>
         </Dialog>
 
-        <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 2xl:container 2xl:mx-auto">
           <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 py-2">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900">{selectedCategory}</h1>
 

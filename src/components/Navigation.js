@@ -24,8 +24,8 @@ export default function Navigation({ toggleCart, viewCart }) {
 
   return (
     <>
-      <Disclosure as="nav" className={`bg-white`}>
-        <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <Disclosure as="nav" className={`bg-lightGray sticky top-0 z-20`}>
+        <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 2xl:container 2xl:mx-auto">
           <div className="relative flex h-16 items-center justify-between">
             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
               {/* Mobile menu button*/}
@@ -69,8 +69,8 @@ export default function Navigation({ toggleCart, viewCart }) {
                 className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 onClick={toggleCart}
               >
-                <span className=' absolute flex items-center justify-center bg-red-500 h-6 -right-1 
-                -top-1 w-6 rounded-full text-white'>{getTotalItems()}</span>
+                <span className=' absolute text-xs flex items-center justify-center bg-red-500 h-5 -right-1 
+                -top-1 w-5 rounded-full text-white'>{getTotalItems()}</span>
                 
                 <span className="sr-only">View Cart</span>
                 <svg

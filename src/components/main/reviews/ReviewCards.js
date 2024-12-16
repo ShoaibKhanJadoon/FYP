@@ -15,7 +15,7 @@ const ReviewCards = () => {
   const autoplay = Autoplay({ delay: 2000 }); // Set autoplay delay in milliseconds
 
   return (
-    <div className="flex justify-center items-center w-full p-8 flex-col">
+    <div className="flex justify-center items-center w-full py-8 flex-col">
       <h2 className="flex justify-center items-center md:text-3xl text-2xl font-bold">
         What Our Customers Say
       </h2>

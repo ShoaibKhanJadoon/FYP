@@ -8,7 +8,7 @@ function Cart({ viewCart, toggleCart }) {
   return (
     <>
       <div
-        className={`fixed top-0 z-20 w-full h-full bg-black dark:bg-gray-900 bg-opacity-90 overflow-y-auto overflow-x-hidden transition-all duration-500 ${viewCart ? "right-0" : "-right-full"
+        className={`fixed top-0 z-30 w-full h-full bg-black dark:bg-gray-900 bg-opacity-90 overflow-y-auto overflow-x-hidden transition-all duration-500 ${viewCart ? "right-0" : "-right-full"
           }`}
         id="chec-div"
       >

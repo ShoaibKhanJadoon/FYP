@@ -8,6 +8,7 @@ module.exports = {
   ],
   theme: {
   	extend: {
+
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -48,7 +49,13 @@ module.exports = {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
-  			}
+  			},
+			  lightGray: '#FAFAFA', // Background
+			  black: '#000000', // Text
+			  navyBlue: '#002D62', // Accent
+			  brightBlue: '#007BFF', // Highlight Option 1
+			  orangeHighlight: '#FF7F50', // Highlight Option 2
+
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

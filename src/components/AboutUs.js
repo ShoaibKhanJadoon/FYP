@@ -2,8 +2,8 @@ import Script from 'next/script';
 
 const AboutUs = () => {
     return (
-        <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
-            <div className="flex flex-col lg:flex-row justify-between gap-8">
+        <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 box-border md:px-6 py-9 px-4 mx-auto max-w-7xl sm:px-6 ">
+            <div className="flex flex-col lg:flex-row justify-between gap-8 w-full">
                 <div className="w-full lg:w-5/12 flex flex-col justify-center">
                     <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 dark:text-white pb-4">
                         About Us

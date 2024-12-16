@@ -5,7 +5,7 @@ import Link from 'next/link'
 const HeroSection = () => {
   return (
     <div>
-      <div className="container">
+      <div className="container w-full ">
         <div className="left-side">
           <div>
             <div className="heading">
