@@ -13,7 +13,7 @@ const NewArrival = ({products,category}) => {
       </div>
       <div className="flex justify-center items-center md:text-3xl text-2xl font-bold">{category}</div>
       <div className="flex justify-end items-center">
-        <Link href={"/Products/Recomended Products"} className="bg-black px-3 py-1 mr-1 text-white rounded-3xl">View All</Link>
+        <Link href={"/Products/Recomended Products"} className="bg-black px-3 py-1  mr-8 text-white rounded-3xl">View All</Link>
       </div>
       <div className="clothes">
       {products.map((product,index)=>(

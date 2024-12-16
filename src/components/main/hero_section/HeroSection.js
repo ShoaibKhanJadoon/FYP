@@ -5,7 +5,7 @@ import Link from 'next/link'
 const HeroSection = () => {
   return (
     <div>
-      <div className="container w-full ">
+      <div className="w-full flex flex-col justify-between sm:flex-row">
         <div className="left-side">
           <div>
             <div className="heading">
@@ -14,7 +14,7 @@ const HeroSection = () => {
               </h2>
             </div>
             <div className="description">
-              <p className="text-xl ">
+              <p className="text-xl text-black ">
                 Discover a wide range of stylish and comfortable clothing tailored to your unique preferences.
                 Whether you&apos;re looking for everyday essentials or statement pieces, we&apos;ve got you covered with quality and elegance in every stitch.
               </p>
