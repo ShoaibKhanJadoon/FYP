@@ -1,5 +1,5 @@
 .brands-logos {
-    width: 100%;
+    width: calc(100%-10px);
     height: 10vh;
     background-color: black;
     display: flex;

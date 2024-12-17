@@ -1,6 +1,7 @@
 import React from "react";
 import "./../hero_section/HeroSection.css";
 import Link from 'next/link'
+import Image from "next/image";
 
 const HeroSection = () => {
   return (
@@ -8,7 +9,7 @@ const HeroSection = () => {
       <div className="w-full flex flex-col justify-between sm:flex-row">
         <div className="left-side">
           <div>
-            <div className="heading">
+            <div className="heading ">
               <h2>
                 FIND CLOTHES <br /> THAT MATCHES <br /> YOUR STYLE
               </h2>
@@ -42,10 +43,12 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="right-side">
-          <img
+          {/* <Image
             src="https://images.pexels.com/photos/29504483/pexels-photo-29504483/free-photo-of-stylish-fashion-portrait-in-lahore-studio.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             alt=""
-          />
+            width={100%}
+            height={100%}
+          /> */}
         </div>
       </div>
     </div>

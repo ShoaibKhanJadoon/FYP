@@ -34,7 +34,7 @@ const ReviewCards = () => {
             >
               <div className="p-1">
                 <div>
-                  <div className="py-3 px-2 min-h-40 bg-gray-100 border-black border-2 rounded-3xl">
+                  <div className="py-3 px-2 min-h-40 bg-lightGray border-black border-2 rounded-3xl">
                     <p className="user-name font-bold">{user.name}</p>
                     <p className="text-yellow-500">{user.stars}</p>
                     <p className="user-review text-gray-700 mt-2">{user.review}</p>

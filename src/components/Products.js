@@ -277,10 +277,7 @@ export default function Products({ selectedCategory }) {
                 </MenuItems>
               </Menu>
 
-              <button type="button" className="-m-2 ml-5 p-2 text-gray-400 hover:text-gray-500 sm:ml-7">
-                <span className="sr-only">View grid</span>
-                <Squares2X2Icon aria-hidden="true" className="size-5" />
-              </button>
+              
               <button
                 type="button"
                 onClick={() => setMobileFiltersOpen(true)}

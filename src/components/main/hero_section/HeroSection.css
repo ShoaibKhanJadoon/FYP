@@ -8,7 +8,7 @@
 }
 
 .left-side {
-    padding-right: 10px;
+    
     width: 50%;
     height: 84vh;
     display: flex;
@@ -112,8 +112,10 @@ p {
         color: black;
         font-weight: 900;
         font-size: 5vh;
-        text-align: left;
+        text-align: center;
         line-height: 5vh;
+        margin-top: 4vh;
+        margin-bottom: 2vh;
     }
 
     .description p {
@@ -121,7 +123,7 @@ p {
         font-family: 'Times New Roman', Times, serif;
         color: darkgray;
         margin-top: -1vh;
-        font-size: larger;
+        font-size:large;
         padding: 0px 5px;
     }
 
