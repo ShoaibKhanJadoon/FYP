@@ -1,14 +1,14 @@
 .container {
     width: 100%;
     height: auto;
-    
+
     display: flex;
-    
+
     justify-content: space-between;
 }
 
 .left-side {
-    
+
     width: 50%;
     height: 84vh;
     display: flex;
@@ -101,7 +101,7 @@ p {
     }
 
     .right-side img {
-        width: 96%;
+        width: 100%;
     }
 
     .right-side {
@@ -118,12 +118,13 @@ p {
         margin-bottom: 2vh;
     }
 
+
     .description p {
         text-align: justify;
         font-family: 'Times New Roman', Times, serif;
         color: darkgray;
         margin-top: -1vh;
-        font-size:large;
+        font-size: large;
         padding: 0px 5px;
     }
 

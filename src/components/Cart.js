@@ -1,15 +1,17 @@
-import React, { useState } from 'react'
-import { useCart } from './CartContext'
-
+import React, { useState } from "react";
+import { useCart } from "./CartContext";
 
 function Cart({ viewCart, toggleCart }) {
   const { cartItems, removeFromCart, getTotalPrice } = useCart();
+  const product = JSON.stringify(cartItems);
+  console.log(product);
 
   return (
     <>
       <div
-        className={`fixed top-0 z-30 w-full h-full bg-black dark:bg-gray-900 bg-opacity-90 overflow-y-auto overflow-x-hidden transition-all duration-500 ${viewCart ? "right-0" : "-right-full"
-          }`}
+        className={`fixed top-0 z-30 w-full h-full bg-black dark:bg-gray-900 bg-opacity-90 overflow-y-auto overflow-x-hidden transition-all duration-500 ${
+          viewCart ? "right-0" : "-right-full"
+        }`}
         id="chec-div"
       >
         <div
@@ -50,13 +52,14 @@ function Cart({ viewCart, toggleCart }) {
               <p className="lg:text-4xl text-3xl font-black leading-10 text-gray-800 dark:text-white pt-3">
                 Bag
               </p>
-              <div className='overflow-x-hidden overflow-y-scroll w-full h-full mb-10'>
+              <div className="overflow-x-hidden overflow-y-scroll w-full h-full mb-10">
                 {cartItems.length === 0 ? (
                   <p className="mt-4 text-xl font-bold">Your Cart is Empty.</p>
                 ) : (
                   <ul>
                     {cartItems.map((item) => (
                       <li key={item.id}>
+                        {console.log(item.id + "sadfhlaksjfhjk")}
 
                         <div className="md:flex items-strech py-8 md:py-10 lg:py-8 border-t border-gray-50">
                           <div className="md:w-4/12 2xl:w-1/4 w-full">
@@ -104,8 +107,12 @@ function Cart({ viewCart, toggleCart }) {
                                   Add to favorites
                                 </p>
 
-                                <button className="text-xs leading-3 underline text-red-500 pl-5 cursor-pointer" onClick={() => removeFromCart(item.id)}>Remove</button>
-
+                                <button
+                                  className="text-xs leading-3 underline text-red-500 pl-5 cursor-pointer"
+                                  onClick={() => removeFromCart(item.id)}
+                                >
+                                  Remove
+                                </button>
                               </div>
                               <p className="text-base font-black leading-none text-gray-800 dark:text-white">
                                 ,000
@@ -113,14 +120,10 @@ function Cart({ viewCart, toggleCart }) {
                             </div>
                           </div>
                         </div>
-
-
                       </li>
                     ))}
                   </ul>
                 )}
-
-
               </div>
             </div>
 
@@ -174,16 +177,12 @@ function Cart({ viewCart, toggleCart }) {
         <style
           dangerouslySetInnerHTML={{
             __html:
-              "\n    /* width */\n    #scroll::-webkit-scrollbar {\n      width: 1px;\n    }\n\n    /* Track */\n    #scroll::-webkit-scrollbar-track {\n      background: #f1f1f1;\n    }\n\n    /* Handle */\n    #scroll::-webkit-scrollbar-thumb {\n      background: rgb(133, 132, 132);\n    }\n  "
+              "\n    /* width */\n    #scroll::-webkit-scrollbar {\n      width: 1px;\n    }\n\n    /* Track */\n    #scroll::-webkit-scrollbar-track {\n      background: #f1f1f1;\n    }\n\n    /* Handle */\n    #scroll::-webkit-scrollbar-thumb {\n      background: rgb(133, 132, 132);\n    }\n  ",
           }}
         />
-      </div >
-
+      </div>
     </>
-
-
-
-  )
+  );
 }
 
-export default Cart
+export default Cart;
